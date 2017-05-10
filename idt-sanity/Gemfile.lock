@@ -41,6 +41,7 @@ GEM
     ffi (1.9.18)
     gherkin (3.2.0)
     json (1.8.6)
+    logger (1.2.8)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -107,6 +108,7 @@ DEPENDENCIES
   appium_lib (= 8.0.2)
   capybara (= 2.7.0)
   cucumber (= 2.3.3)
+  logger
   mustache (~> 1.0)
   phantomjs
   poltergeist
