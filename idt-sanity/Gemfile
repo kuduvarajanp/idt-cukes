@@ -1,0 +1,14 @@
+source "http://rubygems.org"
+
+gem "cucumber" , "2.3.3"
+gem "rspec" , "3.5.0"
+gem "capybara", '2.7.0'
+gem "selenium-webdriver", "2.53.0"
+gem "selenium-cucumber", "2.1.4"
+gem "appium_lib", "8.0.2"
+gem "poltergeist"
+gem "appium_capybara", "1.3.0"
+gem "pry"
+gem "phantomjs"
+gem 'test-unit', '3.1.8'
+gem "mustache", "~> 1.0"
