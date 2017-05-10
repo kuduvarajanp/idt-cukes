@@ -12,3 +12,4 @@ gem "pry"
 gem "phantomjs"
 gem 'test-unit', '3.1.8'
 gem "mustache", "~> 1.0"
+gem "logger"
