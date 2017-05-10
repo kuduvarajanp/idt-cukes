@@ -1,5 +1,13 @@
-Given(/^I visit 'http:\/\/www\.bbc\.co\.uk\/news\/world\-africa\-(\d+)'$/) do |url|
-  visit 'http://www.bbc.co.uk/news/world-africa-28755033'
+
+def visit_url
+  visit @url
+end 
+
+
+Given(/^I visit '(.+)'$/) do |url|
+  @url = false
+  @url = url
+  visit_url
 end
 
 Then(/^I should see a Datapic$/) do
@@ -8,10 +16,6 @@ end
 
 Then(/^I should see the text 'Includes one in the US and six in Mali'$/) do
    expect(page).to have_content("Includes one in the US and six in Mali")
-end
-
-Given(/^I visit 'http:\/\/www\.bbc\.co\.uk\/news\/magazine\-(\d+)'$/) do |url|
- 	visit 'http://www.bbc.co.uk/news/magazine-38997118'
 end
 
 
@@ -23,9 +27,6 @@ Then(/^I should see a Quiz with text 'Which film star and amateur pilot is being
     end
 end
 
-Given(/^I visit 'http:\/\/www\.bbc\.co\.uk\/news\/uk\-politics\-(\d+)'$/) do |url|
-   visit 'http://www.bbc.co.uk/news/uk-politics-39056786'
-end
 
 Then(/^I should see a chart$/) do
 	expect(page).to have_selector(:xpath, '//*[@id="ns_chart_Sweden_asylum"]')
@@ -39,9 +40,6 @@ Then(/^I should see the text 'Asylum applicants in Sweden'$/) do
     end
  end
 
- Given(/^I visit 'http:\/\/www\.bbc\.co\.uk\/news\/uk\-england\-london\-(\d+)'$/) do |url|
-  visit 'http://www.bbc.co.uk/news/uk-england-london-38301208'
-end
 
 Then(/^I should see a imageslider$/) do
   expect(page).to have_selector(:xpath, '//*[@id="news_idt__image-slider__oxfordstreet"]')
