@@ -7,11 +7,13 @@ end
 Given(/^I visit '(.+)'$/) do |url|
   @url = false
   @url = url
+  @env=URI.parse(url).host
+  puts @env
   visit_url
 end
 
 Then(/^I should see a Datapic$/) do
-   expect(page).to have_selector(:xpath, '//*[@id="ns_datapic_ebola-updates"]')
+    expect(page).to have_selector(:xpath, '//*[@id="ns_datapic_ebola-updates"]')
 end
 
 Then(/^I should see the text 'Includes one in the US and six in Mali'$/) do
