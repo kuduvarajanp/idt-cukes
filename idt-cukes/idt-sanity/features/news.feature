@@ -54,4 +54,3 @@ Scenario: Imageslider on stage
 	And I should see the text 'Christmas rush hour in Oxford Street'
 
 
-
